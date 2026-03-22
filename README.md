@@ -41,7 +41,7 @@ Antes de iniciar a simulação, certifique-se de que a rede está montada:
     * Clique em **Add**.
     * Faça isso para cada host da sua topologia e no final deve ficar uma tabela como a figura a seguir:
 
-<img src="https://github.com/agodoi/m09ec-semana08a/blob/main/assets/tabelaDNS2-Server.png" width="600">
+<img src="https://github.com/agodoi/m09ec-semana08a/blob/main/assets/tabela2DNS-Server.png" width="600">
 
 Para que essa tabela vai servir? Para você pingar os hosts usando o nome de deles e não o endereço de IP. Mas isso faremos nas etapas seguintes desta aula.
 
