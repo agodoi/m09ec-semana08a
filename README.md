@@ -17,27 +17,30 @@ Antes de iniciar a simulação, certifique-se de que a rede está montada:
     * `Email Client`
 3.  Vá en **End Devices** e adicione 2 **Servidores:** servidor no switch direito;
 4.  Nomeie os servidores como:
-    * `MultiServer`. Pra isso, vá na aba `Config`, depois **`GLOBAL`** e depois `Settings`, digite `MultiServer`;
-    * `Server-DNS`. Faça o mesmo para este servidor.
-5.  **Configuração IP:** Certifique-se de que todos os dispositivos estão na mesma sub-rede (ex: 192.168.0.x). Pegue suas anotações do mapeamento de rede da última aula. Deve ser igual à tabela abaixo. Então, adicione manualmente o IP em cada PC e servidor conforme a topologia. Quem está no switch esquerdo use a faixa de IPs da esquerda. Quem está no switch direito, use a faixa de IPs da direita.
+    * `MultiServer`. Pra isso, vá na aba `Config`, depois **`GLOBAL`** e depois `Settings`, digite `MultiServer` no campo `Display Name`;
+    * `Server-DNS`. Faça o mesmo para este outro servidor.
+5.  **Configuração IP e Máscara:** Configure o IP e a máscara de todos os hosts que estão na mesma sub-rede. Pegue suas anotações do mapeamento de rede da última aula. Deve ser igual à tabela abaixo. Então, adicione manualmente o IP em cada PC e servidor conforme a topologia: quem está no switch esquerdo use a faixa de IPs da esquerda. Quem está no switch direito, use a faixa de IPs da direita. **Qual IP escolher para cada host?** A boa prática é a seguinte: servidores e impressoras devem ter os primeiros IPs da faixa. PCs veem na sequência.
 
 
-| Sub-rede | Localização/Uso              | Endereço de Rede | 1º Útil        | Último Útil     | Broadcast |   Máscara           | Gateway (Configurado)      |
-|----------|-----------------------------|------------------|----------------|-----------------|-------------------|-------------------|----------------------------|
-| Sub 1    | LAN Alunos (Esquerda)       | 192.168.0.0      | 192.168.0.1    | 192.168.0.62    | 192.168.0.63  | 255.255.255.192   | 192.168.0.62              |
-| Sub 2    | Link WAN (Roteadores)       | 192.168.0.64     | 192.168.0.65   | 192.168.0.126   | 192.168.0.127 | 255.255.255.192   | N/A (Ponto-a-Ponto)       |
-| Sub 3    | LAN Profs (Direita)         | 192.168.0.128    | 192.168.0.129  | 192.168.0.190   | 192.168.0.191 | 255.255.255.192   | 192.168.0.190             |
-| Sub 4    | Disponível (Reserva)        | 192.168.0.192    | 192.168.0.193  | 192.168.0.254   | 192.168.0.255 | 255.255.255.192   | a definir                 |
+| Sub-rede | Localização/Uso             | Endereço de Rede | 1º Útil        | Último Útil     | Broadcast     |   Máscara        | Gateway (Configurado) |
+|----------|-----------------------------|------------------|----------------|-----------------|---------------|------------------|-----------------------|
+| Sub 1    | LAN Alunos (Esquerda)       | 192.168.0.0      | 192.168.0.1    | 192.168.0.62    | 192.168.0.63  | 255.255.255.192  | 192.168.0.62          |
+| Sub 2    | Link WAN (Roteadores)       | 192.168.0.64     | 192.168.0.65   | 192.168.0.126   | 192.168.0.127 | 255.255.255.192  | N/A (Ponto-a-Ponto)   |
+| Sub 3    | LAN Profs (Direita)         | 192.168.0.128    | 192.168.0.129  | 192.168.0.190   | 192.168.0.191 | 255.255.255.192  | 192.168.0.190         |
+| Sub 4    | Disponível (Reserva)        | 192.168.0.192    | 192.168.0.193  | 192.168.0.254   | 192.168.0.255 | 255.255.255.19   | a definir             |
 
-
-6.  E certfique-se que os serviços (HTTP, EMAIL e FTP) estão ativos no `MultiServer`. Clique no Servidor e vá na aba `Service` e depois:
+6.  Configure o **Gateway** em todos os hots: PCs e Sevidores, seguindo a tabela acima;
+7.  E certfique-se que os serviços (HTTP, EMAIL e FTP) estão ativos no `MultiServer`. Clique no Servidor e vá na aba `Service` e depois:
     * HTTP: verifique que está no `On`;
     * EMAIL: verifique que está no `On`;
     * FTP: verifique que está no `On`.
-8. 
-9.
-10.
-11.  Vá em `Config` e depois `Settings`e preencha o campo `Display Name`
+
+8. **Configuração do DNS-Server**: Você deve digitar no DNS-Server o nome e o IP de cada host da sua rede. Para isso, vá na aba `Service`, no menu vertical `DNS` você preenche os seguintes campos:
+    * Name: você digita exatamente a sequência de caracteres que você nomeou um dado host;
+    * Addess: você digita o IP que você atribiu para ele;
+    * Clique em **Add**. Deve ficar uma tabela como a figura a seguir:
+
+<img src="https://github.com/agodoi/m09ec-semana08a/blob/main/assets/tabelaDNS-Server" width="300">
 
 ---
 
@@ -98,6 +101,14 @@ Para ver as conexões ativas "em tempo real", volte para o **Realtime Mode**:
     * Identifique as portas: **21** (FTP), **80** (HTTP) e **25** (SMTP/Email);
     * Observe que algumas conexões fecham rapidamente, enquanto o FTP permanece aberto aguardando a senha do usuário;
 ---
+
+
+## 4. Parte 4: Verificando o funcionamento do DNS
+Vá em pelo menos 3 hosts quaisquer da sua topologia, abra o `Command Prompt` da aba `Desktop` e digite:
+* ping `nome do pc` e aguarde o resultado. Note que você não colocou o IP explicitamente e sim, o nome do computador;
+* Esse artifício só é possível porque o servidor DNS existe com o nome de cada PC e o seu respectivo IP.
+
+
 
 ## Responda no Google Forms:
 * **Cores das PDUs:** Por que têm pacotes de cores diferentes?
