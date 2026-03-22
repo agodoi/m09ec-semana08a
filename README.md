@@ -15,10 +15,11 @@ Antes de iniciar a simulação, certifique-se de que a rede está montada:
     * `FTP Client`
     * `DNS Client`
     * `Email Client`
-3.  Vá en **End Devices** e adicione 2 **Servidores:** servidor no switch direito e nomeie-o como:
-    * `MultiServer`
-    * `Server-DNS`
-4.  **Configuração IP:** Certifique-se de que todos os dispositivos estão na mesma sub-rede (ex: 192.168.0.x). Pegue suas anotações do mapeamento de rede da última aula [Abra uma nova aba https://github.com/agodoi/m09ec-semana07](https://github.com/agodoi/m09ec-semana07) e vá no **item 3**.
+3.  Vá en **End Devices** e adicione 2 **Servidores:** servidor no switch direito;
+4.  Nomeie os servidores como:
+    * `MultiServer`. Pra isso, vá na aba `Config`, depois **`GLOBAL`** e depois `Settings`, digite `MultiServer`;
+    * `Server-DNS`. Faça o mesmo para este servidor.
+5.  **Configuração IP:** Certifique-se de que todos os dispositivos estão na mesma sub-rede (ex: 192.168.0.x). Pegue suas anotações do mapeamento de rede da última aula. Deve ser igual à tabela abaixo. Então, adicione manualmente o IP em cada PC e servidor conforme a topologia. Quem está no switch esquerdo use a faixa de IPs da esquerda. Quem está no switch direito, use a faixa de IPs da direita.
 
 
 | Sub-rede | Localização/Uso              | Endereço de Rede | 1º Útil        | Último Útil     | Broadcast |   Máscara           | Gateway (Configurado)      |
@@ -29,7 +30,14 @@ Antes de iniciar a simulação, certifique-se de que a rede está montada:
 | Sub 4    | Disponível (Reserva)        | 192.168.0.192    | 192.168.0.193  | 192.168.0.254   | 192.168.0.255 | 255.255.255.192   | a definir                 |
 
 
-6.  E certfique-se que os serviços (HTTP, FTP e EMAIL) estão ativos no `MultiServer`. Vá no 
+6.  E certfique-se que os serviços (HTTP, EMAIL e FTP) estão ativos no `MultiServer`. Clique no Servidor e vá na aba `Service` e depois:
+    * HTTP: verifique que está no `On`;
+    * EMAIL: verifique que está no `On`;
+    * FTP: verifique que está no `On`.
+8. 
+9.
+10.
+11.  Vá em `Config` e depois `Settings`e preencha o campo `Display Name`
 
 ---
 
