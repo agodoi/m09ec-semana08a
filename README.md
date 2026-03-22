@@ -23,7 +23,7 @@ Antes de iniciar a simulação, certifique-se de que a rede está montada:
 ## 1. Parte 1: Gerando Tráfego de Rede
 Mude para o **Modo de Simulação** e siga os passos abaixo para cada cliente:
 
-<img src="https://github.com/agodoi/m09ec-semana07/blob/main/assets/simulation.png" width="800">
+<img src="https://github.com/agodoi/m09ec-semana08a/blob/main/assets/simulation.png" width="800">
 
 
 ### A. Cliente HTTP
