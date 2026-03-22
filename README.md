@@ -110,9 +110,12 @@ Para ver as conexões ativas "em tempo real", volte para o **Realtime Mode**:
 
 
 ## 4. Parte 4: Verificando o funcionamento do DNS-Server
-Vá em pelo menos 3 hosts quaisquer da sua topologia, abra o `Command Prompt` da aba `Desktop` e digite:
+Escolha um host da esquerda e ping todos os demais hosts da sua topologia. Para isso faça:
+* Abra o **Command Prompt** da aba **Desktop** e digite:
 * ping `nome do pc` e aguarde o resultado. Note que você não colocou o IP explicitamente e sim, o nome do computador;
-* Esse artifício só é possível porque existe o servidor DNS com o nome de cada PC e o seu respectivo IP.
+* Esse artifício só é possível porque existe o servidor DNS com o nome de cada PC e o seu respectivo IP;
+* Você deve simular o caminho do pacote para ver isso acontecer ponto-a-ponto para aprender como é na prática;
+* Caso você receba uma mensagem de erro dizendo **request could not find host dns-server. Please check the name and try again.** significa que a sua tabela DNS não possui o respectivo host e IP cadastrado. Confira a tabela novamente e adicione o que estiver faltando.
 
 ## 5. Parte 5: Verificando o funcionamento do FTP-Server
 Essa parte é muito louca. Você vai salvar um arquivo `.txt` (a partir de qualquer host) no Multi-Server já que você o configurou para suportar o FTP.
@@ -136,11 +139,25 @@ Essa parte é muito louca. Você vai salvar um arquivo `.txt` (a partir de qualq
 
 <img src="https://github.com/agodoi/m09ec-semana08a/blob/main/assets/FTP.png" width="600">
 
+### C. Salvando um arquivo .txt no Multi-Server
+
+* Volte no FTP-Client;
+* Abra o **Command-Prompt**;
+* Digite `ftp multi-server`;
+* Entre com as credenciais do SUPER usuário que você criou;
+* Digite `put meutexto.txt` [ENTER];
+* E o arquivo será salvo no servidor de arquivos Multi-Server;
+* Ainda na mesma tela do **Command-Prompt** do FTP-Client, digite o comando `dir` e veja o seu arquivo listado no Multi-Server;
+* Agora digite `quit`para fechar a conexão do SUPER usuário;
+* Digite `ftp multi-server`;
+* Entre com as credenciais do MINI usuário que você criou;
+* Digite `put meutexto.txt` [ENTER];
+* Vai dar acesso negado, certo? Isso é normal porque você não habilitou o modo **Write** para este usuário.
+
 ## Responda no Google Forms:
-* **Cores das PDUs:** Por que têm pacotes de cores diferentes?
-* **Segurança:** Por que o FTP ou HTTP são considerados "não seguros" em comparação com versões criptografadas (HTTPS/SFTP)? Notou que os dados (incluindo senhas) viajam em texto claro no TCP básico?
-* **Portas Bem Conhecidas:** Atente-se à memorização das portas:
-    * DNS: 53 (UDP)
-    * HTTP: 80 (TCP)
-    * FTP: 21 (TCP)
-    * SMTP: 25 (TCP)
+
+#### (1) Cores das PDUs: Por que têm pacotes de cores diferentes?
+#### (2) Segurança: Por que o FTP ou HTTP são considerados "não seguros" em comparação com versões criptografadas (HTTPS/SFTP)? Notou que os dados (incluindo senhas) viajam em texto claro no TCP básico?
+#### (3) No modo de simulação, ao analisar uma troca de mensagens HTTP (TCP), você deve observar a PDU que retorna do servidor para o cliente. Se o 'Sequence Number' enviado pelo cliente era 0, qual alteração ocorre no campo 'Acknowledgment Number' (Número de Reconhecimento) na PDU de resposta e o que isso valida?
+#### (4) Durante a simulação de uma consulta DNS (UDP), ao abrir os detalhes da PDU na camada de transporte, você notará que os campos 'Sequence Number' e 'Acknowledgment Number' não existem. Por que esses campos estão ausentes no cabeçalho UDP?
+#### (5) Ao executar o comando 'netstat' no terminal do MultiServer após interagir com todos os serviços, o aluno observa que a conexão na porta 21 (FTP) permanece no estado 'ESTABLISHED', enquanto outras (como HTTP) fecham rapidamente. Qual a razão para essa persistência do FTP?
