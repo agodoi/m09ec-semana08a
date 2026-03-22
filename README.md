@@ -11,14 +11,14 @@
 Antes de iniciar a simulação, certifique-se de que a rede está montada:
 1.  Vamos aproveitar a topologia da aula passada e adicionar os itens a seguir: 
 2.  Vá em **End Devices** e adicione 4 **Clientes:** computadores (PCs) no switch esquerdo e nomeie-os como:
-    * `HTTP Client`
-    * `FTP Client`
-    * `DNS Client`
-    * `Email Client`
+    * `HTTP-Client`
+    * `FTP-Client`
+    * `DNS-Client`
+    * `Email-Client`
 3.  Vá en **End Devices** e adicione 2 **Servidores:** servidor no switch direito;
 4.  Nomeie os servidores como:
-    * `MultiServer`. Pra isso, vá na aba `Config`, depois **`GLOBAL`** e depois `Settings`, digite `MultiServer` no campo `Display Name`;
-    * `Server-DNS`. Faça o mesmo para este outro servidor.
+    * `Multi-Server`. Pra isso, vá na aba `Config`, depois **`GLOBAL`** e depois `Settings`, digite `Multi-Server` no campo `Display Name`;
+    * `DNS-Server`. Faça o mesmo para este outro servidor.
 5.  **Configuração IP e Máscara:** Configure o IP e a máscara de todos os hosts que estão na mesma sub-rede. Pegue suas anotações do mapeamento de rede da última aula. Deve ser igual à tabela abaixo. Então, adicione manualmente o IP em cada PC e servidor conforme a topologia: quem está no switch esquerdo use a faixa de IPs da esquerda. Quem está no switch direito, use a faixa de IPs da direita. **Qual IP escolher para cada host?** A boa prática é a seguinte: servidores e impressoras devem ter os primeiros IPs da faixa. PCs veem na sequência.
 
 
@@ -30,7 +30,7 @@ Antes de iniciar a simulação, certifique-se de que a rede está montada:
 | Sub 4    | Disponível (Reserva)        | 192.168.0.192    | 192.168.0.193  | 192.168.0.254   | 192.168.0.255 | 255.255.255.19   | a definir             |
 
 6.  Configure o **Gateway** em todos os hots: PCs e Sevidores, seguindo a tabela acima;
-7.  E certfique-se que os serviços (HTTP, EMAIL e FTP) estão ativos no `MultiServer`. Clique no Servidor e vá na aba `Service` e depois:
+7.  E certfique-se que os serviços (HTTP, EMAIL e FTP) estão ativos no `Multi-Server`. Clique no Servidor e vá na aba `Service` e depois:
     * HTTP: verifique que está no `On`;
     * EMAIL: verifique que está no `On`;
     * FTP: verifique que está no `On`.
@@ -54,20 +54,20 @@ Mude para o **Modo de Simulação** e siga os passos abaixo para cada cliente:
 <img src="https://github.com/agodoi/m09ec-semana08a/blob/main/assets/simulation.png" width="300">
 
 
-### A. Cliente HTTP
-* Abra o `HTTP Client` > aba **Desktop** > **Web Browser**.
-* Digite o IP do `MultiServer` e clique em **Go**. Feche a janela no X.
+### A. HTTP-Client
+* Abra o `HTTP-Client` > aba **Desktop** > **Web Browser**.
+* Digite o IP do `Multi-Server` e clique em **Go**. Feche a janela no X.
 
-### B. Cliente FTP
-* Abra o `FTP Client` > aba **Desktop** > **Command Prompt**.
-* Digite o comando: `ftp [IP_do_MultiServer]`. Feche a janela no X.
+### B. FTP-Client
+* Abra o `FTP-Client` > aba **Desktop** > **Command Prompt**.
+* Digite o comando: `ftp [IP do Multi-Server]`. Feche a janela no X.
 
-### C. Cliente DNS
-* Abra o `DNS Client` > aba **Desktop** > **Command Prompt**.
+### C. DNS-Client
+* Abra o `DNS-Client` > aba **Desktop** > **Command Prompt**.
 * Digite o comando: `nslookup multiserver.pt.ptu`. Feche a janela no X.
 
-### D. Cliente de E-mail
-* Abra o `Email Client` > aba **Desktop** > **Email**.
+### D. E-mail-Client
+* Abra o `Email-Client` > aba **Desktop** > **Email**.
 * Clique em **Compose** (Compor) e envie um e-mail para: `user@multiserver.pt.ptu`.
 * Assunto e corpo do texto: Qualquer mensagem (ex: "Teste TCP"). Clique em **Send**.
 
@@ -113,8 +113,26 @@ Vá em pelo menos 3 hosts quaisquer da sua topologia, abra o `Command Prompt` da
 * Esse artifício só é possível porque existe o servidor DNS com o nome de cada PC e o seu respectivo IP.
 
 ## 5. Parte 5: Verificando o funcionamento do FTP-Server
+Essa parte é muito louca. Você vai salvar um arquivo `.txt` (a partir de qualquer host) no Multi-Server já que você o configurou para suportar o FTP.
 
+### A. Criando um arquivo texto qualquer:
+* Vá no host FTP-Client, mas você poderia ir em qualquer host da sua topologia e fazer o mesmo; 
+* Vá na aba **Desktop**;
+* Clique em **Text Editor**;
+* Digite um texto de 250 palavras. Pede o GPTO criar um texto doido com 250 palavras para você. Copie e cole no editor de texto, clique em **File** e salve com o nome `meutexto.txt`;
 
+### B. Configurando o Multi-Server como FTP:
+* Clique no host **Multi-Server**;
+* Vá na aba **Services**;
+* Vá no menu vertical **FTP**;
+* No campo **User Name** crie um SUPER usuário e uma senha em **Password**. Anote isso aí no canto para não esquecer. Porque SUPER usuário? Porque ele vai ter acesso à tudo no FTP.
+* Marque as 5 caixinhas: **Write**, **Read**, **Delete**, **Rename** e **List**;
+* Clique em **Add**;
+* Agora crie um MINI usuário e com outra senha em **Password**. Novamente, anota isso aí para não esquecer. Este **MINI** vai ter restrições de acesso ao FTP.
+* Marque as caixinhas: **Read** e **List**;
+* Clique em **Add**.
+
+<img src="https://github.com/agodoi/m09ec-semana08a/blob/main/assets/FTP.png" width="300">
 
 ## Responda no Google Forms:
 * **Cores das PDUs:** Por que têm pacotes de cores diferentes?
