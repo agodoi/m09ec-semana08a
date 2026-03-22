@@ -10,7 +10,7 @@
 ## 0. Preparação do Ambiente (Topologia)
 Antes de iniciar a simulação, certifique-se de que a rede está montada:
 1.  **Servidor:** Adicione um servidor e nomeie-o como `MultiServer`.
-2.  **Clientes:** Adicione 4 computadores (PCs) e nomeie-os como:
+2.  **Clientes:** Adicione +4 computadores (PCs) do lado esquerdo e nomeie-os como:
     * `HTTP Client`
     * `FTP Client`
     * `DNS Client`
