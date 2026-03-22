@@ -39,7 +39,7 @@ Antes de iniciar a simulação, certifique-se de que a rede está montada:
     * **Name:** você digita exatamente a sequência de caracteres que você nomeou um dado host;
     * **Addess:** você digita o IP que você atribiu para ele;
     * Clique em **Add**.
-    * Faça isso para cada host da sua topologia e no final deve ficar uma tabela como a figura a seguir:
+    * Faça isso para cada host da sua topologia e no final deve ficar uma tabela como a figura a seguir com 9 linhas:
 
 <img src="https://github.com/agodoi/m09ec-semana08a/blob/main/assets/tabela2DNS-Server.png" width="600">
 
