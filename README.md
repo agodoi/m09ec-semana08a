@@ -11,7 +11,7 @@
 Antes de iniciar a simulação, certifique-se de que a rede está montada:
 1.  Vamos aproveitar a topologia da aula passada e adicionar os itens a seguir:
 
-<img src="https://github.com/agodoi/m09ec-semana08a/blob/main/assets/topologia.png" width="600">
+<img src="https://github.com/agodoi/m09ec-semana08a/blob/main/assets/topologia.png" width="1000">
 
 
 2.  Vá em **End Devices** e adicione 4 **Clientes:** computadores (PCs) no switch esquerdo e nomeie-os como:
