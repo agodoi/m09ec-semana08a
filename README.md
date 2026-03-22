@@ -132,7 +132,7 @@ Essa parte é muito louca. Você vai salvar um arquivo `.txt` (a partir de qualq
 * Marque as caixinhas: **Read** e **List**;
 * Clique em **Add**.
 
-<img src="https://github.com/agodoi/m09ec-semana08a/blob/main/assets/FTP.png" width="300">
+<img src="https://github.com/agodoi/m09ec-semana08a/blob/main/assets/FTP.png" width="600">
 
 ## Responda no Google Forms:
 * **Cores das PDUs:** Por que têm pacotes de cores diferentes?
