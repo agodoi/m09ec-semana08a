@@ -78,7 +78,7 @@ Para ver as conexões ativas "em tempo real", volte para o **Realtime Mode**:
     * Observe que algumas conexões fecham rapidamente, enquanto o FTP permanece aberto aguardando a senha do usuário;
 ---
 
-## Dicas para o Professor:
+## Responda no Google Forms:
 * **Cores das PDUs:** Porque têm pacotes de cores diferentes?
 * **Segurança:** Por que o FTP ou HTTP são considerados "não seguros" em comparação com versões criptografadas (HTTPS/SFTP)? Notou que os dados (incluindo senhas) viajam em texto claro no TCP básico?
 * **Portas Bem Conhecidas:** Atente-se à memorização das portas:
