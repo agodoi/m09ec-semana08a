@@ -18,8 +18,18 @@ Antes de iniciar a simulação, certifique-se de que a rede está montada:
 3.  Vá en **End Devices** e adicione 2 **Servidores:** servidor no switch direito e nomeie-o como:
     * `MultiServer`
     * `Server-DNS`
-4.  **Configuração IP:** Certifique-se de que todos os dispositivos estão na mesma sub-rede (ex: 192.168.0.x). Pegue suas anotações do mapeamento de rede da última aula [Abra uma nova aba https://github.com/agodoi/m09ec-semana07](https://github.com/agodoi/m09ec-semana07)
-5.  E certfique-se que os serviços (HTTP, FTP e EMAIL) estão ativos no `MultiServer`.
+4.  **Configuração IP:** Certifique-se de que todos os dispositivos estão na mesma sub-rede (ex: 192.168.0.x). Pegue suas anotações do mapeamento de rede da última aula [Abra uma nova aba https://github.com/agodoi/m09ec-semana07](https://github.com/agodoi/m09ec-semana07) e vá no **item 3**.
+
+
+| Sub-rede | Localização/Uso              | Endereço de Rede | 1º Útil        | Último Útil     | Broadcast |   Máscara           | Gateway (Configurado)      |
+|----------|-----------------------------|------------------|----------------|-----------------|-------------------|-------------------|----------------------------|
+| Sub 1    | LAN Alunos (Esquerda)       | 192.168.0.0      | 192.168.0.1    | 192.168.0.62    | 192.168.0.63  | 255.255.255.192   | 192.168.0.62              |
+| Sub 2    | Link WAN (Roteadores)       | 192.168.0.64     | 192.168.0.65   | 192.168.0.126   | 192.168.0.127 | 255.255.255.192   | N/A (Ponto-a-Ponto)       |
+| Sub 3    | LAN Profs (Direita)         | 192.168.0.128    | 192.168.0.129  | 192.168.0.190   | 192.168.0.191 | 255.255.255.192   | 192.168.0.190             |
+| Sub 4    | Disponível (Reserva)        | 192.168.0.192    | 192.168.0.193  | 192.168.0.254   | 192.168.0.255 | 255.255.255.192   | a definir                 |
+
+
+6.  E certfique-se que os serviços (HTTP, FTP e EMAIL) estão ativos no `MultiServer`. Vá no 
 
 ---
 
