@@ -42,6 +42,10 @@ Antes de iniciar a simulação, certifique-se de que a rede está montada:
 
 <img src="https://github.com/agodoi/m09ec-semana08a/blob/main/assets/tabelaDNS-Server.png" width="600">
 
+Para que essa tabela vai servir? Para você pingar os hosts usando o nome de deles e não o endereço de IP. Mas isso faremos nas etapas seguintes desta aula.
+
+    * O DNS do DNS-Server deve ser ele mesmo: 192.168.0.130. Este é o endereço que adotei para a minha rede, já que o 192.168.0.129 ficou para o Multi-Server. Lembrando que o final `.129` é o 1º IP útil da rede `.128` e o combinado é que os servidores tenham os primeiros IPs úteis da respectiva rede.
+
 ---
 
 ## 1. Parte 1: Gerando Tráfego de Rede
@@ -103,10 +107,12 @@ Para ver as conexões ativas "em tempo real", volte para o **Realtime Mode**:
 ---
 
 
-## 4. Parte 4: Verificando o funcionamento do DNS
+## 4. Parte 4: Verificando o funcionamento do DNS-Server
 Vá em pelo menos 3 hosts quaisquer da sua topologia, abra o `Command Prompt` da aba `Desktop` e digite:
 * ping `nome do pc` e aguarde o resultado. Note que você não colocou o IP explicitamente e sim, o nome do computador;
-* Esse artifício só é possível porque o servidor DNS existe com o nome de cada PC e o seu respectivo IP.
+* Esse artifício só é possível porque existe o servidor DNS com o nome de cada PC e o seu respectivo IP.
+
+## 5. Parte 5: Verificando o funcionamento do FTP-Server
 
 
 
