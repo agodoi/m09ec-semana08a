@@ -44,7 +44,7 @@ Antes de iniciar a simulação, certifique-se de que a rede está montada:
 
 Para que essa tabela vai servir? Para você pingar os hosts usando o nome de deles e não o endereço de IP. Mas isso faremos nas etapas seguintes desta aula.
 
-* O DNS do DNS-Server deve ser ele mesmo: 192.168.0.130. Este é o endereço que adotei para a minha rede, já que o 192.168.0.129 ficou para o Multi-Server. Lembrando que o final `.129` é o 1º IP útil da rede `.128` e o combinado é que os servidores tenham os primeiros IPs úteis da respectiva rede.
+* O DNS do DNS-Server deve ser ele mesmo: 192.168.0.130. Este é o endereço que adotei para a minha rede, já que o 192.168.0.129 ficou para o Multi-Server. Lembrando que o final `.129` é o 1º IP útil da rede `.128` e o combinado é que os servidores tenham os primeiros IPs úteis da respectiva rede. Logo, o final `.129`ficou para o `Multi-Server`e o final `.130` ficou pro `DNS-Server`.
 
 ---
 
