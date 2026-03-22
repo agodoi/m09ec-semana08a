@@ -35,9 +35,9 @@ Antes de iniciar a simulação, certifique-se de que a rede está montada:
     * EMAIL: verifique que está no `On`;
     * FTP: verifique que está no `On`.
 
-8. **Configuração do DNS-Server**: Você deve digitar no DNS-Server o nome e o IP de cada host da sua rede. Para isso, vá na aba `Service`, no menu vertical `DNS` você preenche os seguintes campos:
-    * Name: você digita exatamente a sequência de caracteres que você nomeou um dado host;
-    * Addess: você digita o IP que você atribiu para ele;
+8. **Configuração do DNS-Server**: Você deve montar uma tabela no DNS-Server que tenha o nome e o IP de cada host da sua rede. Para isso, clique no hots **DNS-Server**, vá na aba `Service`, no menu vertical `DNS` você preenche os seguintes campos:
+    * **Name:** você digita exatamente a sequência de caracteres que você nomeou um dado host;
+    * **Addess:** você digita o IP que você atribiu para ele;
     * Clique em **Add**. Deve ficar uma tabela como a figura a seguir:
 
 <img src="https://github.com/agodoi/m09ec-semana08a/blob/main/assets/tabelaDNS-Server.png" width="600">
