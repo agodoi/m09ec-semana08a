@@ -40,7 +40,7 @@ Antes de iniciar a simulação, certifique-se de que a rede está montada:
     * Addess: você digita o IP que você atribiu para ele;
     * Clique em **Add**. Deve ficar uma tabela como a figura a seguir:
 
-<img src="https://github.com/agodoi/m09ec-semana08a/blob/main/assets/tabelaDNS-Server.png" width="300">
+<img src="https://github.com/agodoi/m09ec-semana08a/blob/main/assets/tabelaDNS-Server.png" width="600">
 
 ---
 
