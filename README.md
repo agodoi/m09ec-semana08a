@@ -38,9 +38,10 @@ Antes de iniciar a simulação, certifique-se de que a rede está montada:
 8. **Configuração do DNS-Server**: Você deve montar uma tabela no DNS-Server que tenha o nome e o IP de cada host da sua rede. Para isso, clique no hots **DNS-Server**, vá na aba `Service`, no menu vertical `DNS` você preenche os seguintes campos:
     * **Name:** você digita exatamente a sequência de caracteres que você nomeou um dado host;
     * **Addess:** você digita o IP que você atribiu para ele;
-    * Clique em **Add**. Deve ficar uma tabela como a figura a seguir:
+    * Clique em **Add**.
+    * Faça isso para cada host da sua topologia e no final deve ficar uma tabela como a figura a seguir:
 
-<img src="https://github.com/agodoi/m09ec-semana08a/blob/main/assets/tabelaDNS-Server.png" width="600">
+<img src="https://github.com/agodoi/m09ec-semana08a/blob/main/assets/tabelaDNS2-Server.png" width="600">
 
 Para que essa tabela vai servir? Para você pingar os hosts usando o nome de deles e não o endereço de IP. Mas isso faremos nas etapas seguintes desta aula.
 
