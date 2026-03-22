@@ -3,13 +3,17 @@
 **Objetivo:** 
 * Dominar o ambiente do Packet Tracer;
 * Compreender o funcionamento dos protocolos da camada de transporte (TCP e UDP), analisar portas, números de sequência, confirmações (ACK) e o processo de multiplexação;
-* Explorar os serviços da camada de Aplicação;
+* Explorar os serviços da camada de Aplicação como HTTP, E-mail, FTP e DNS;
   
 ---
 
 ## 0. Preparação do Ambiente (Topologia)
 Antes de iniciar a simulação, certifique-se de que a rede está montada:
-1.  Vamos aproveitar a topologia da aula passada e adicionar os itens a seguir: 
+1.  Vamos aproveitar a topologia da aula passada e adicionar os itens a seguir:
+
+<img src="https://github.com/agodoi/m09ec-semana08a/blob/main/assets/topologia.png" width="600">
+
+
 2.  Vá em **End Devices** e adicione 4 **Clientes:** computadores (PCs) no switch esquerdo e nomeie-os como:
     * `HTTP-Client`
     * `FTP-Client`
