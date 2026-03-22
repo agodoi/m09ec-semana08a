@@ -9,14 +9,17 @@
 
 ## 0. Preparação do Ambiente (Topologia)
 Antes de iniciar a simulação, certifique-se de que a rede está montada:
-1.  **Servidor:** Adicione um servidor e nomeie-o como `MultiServer`.
-2.  **Clientes:** Adicione +4 computadores (PCs) do lado esquerdo e nomeie-os como:
+1.  Vamos aproveitar a topologia da aula passada e adicionar os itens a seguir: 
+2.  Vá em **End Devices** e adicione 4 **Clientes:** computadores (PCs) no switch esquerdo e nomeie-os como:
     * `HTTP Client`
     * `FTP Client`
     * `DNS Client`
     * `Email Client`
-3.  **Conectividade:** Conecte todos os dispositivos a um **Switch** genérico.
-4.  **Configuração IP:** Certifique-se de que todos os dispositivos estão na mesma sub-rede (ex: 192.168.1.x) e que os serviços (HTTP, FTP, DNS, EMAIL) estão ativos no `MultiServer`.
+3.  Vá en **End Devices** e adicione 2 **Servidores:** servidor no switch direito e nomeie-o como:
+    * `MultiServer`
+    * `Server-DNS`
+4.  **Configuração IP:** Certifique-se de que todos os dispositivos estão na mesma sub-rede (ex: 192.168.0.x). Pegue suas anotações do mapeamento de rede da última aula;
+5.  E certfique-se que os serviços (HTTP, FTP e EMAIL) estão ativos no `MultiServer`.
 
 ---
 
