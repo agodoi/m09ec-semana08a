@@ -70,11 +70,11 @@ Mude para o **Modo de Simulação** e siga os passos abaixo para cada cliente:
 
 ### C. DNS-Client
 * Abra o `DNS-Client` > aba **Desktop** > **Command Prompt**.
-* Digite o comando: `nslookup multiserver.pt.ptu`. Feche a janela no X.
+* Digite o comando: `nslookup Multi-Server`. Feche a janela no X.
 
 ### D. E-mail-Client
 * Abra o `Email-Client` > aba **Desktop** > **Email**.
-* Clique em **Compose** (Compor) e envie um e-mail para: `user@multiserver.pt.ptu`.
+* Clique em **Compose** (Compor) e envie um e-mail para: `user@multi-server`.
 * Assunto e corpo do texto: Qualquer mensagem (ex: "Teste TCP"). Clique em **Send**.
 
 ---
